@@ -1,0 +1,36 @@
+@import './utils/reset';
+@import './utils/variable';
+
+body {
+    background: $bgcolor;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $txtcolor;
+    text-shadow: 0 2px 50px $shadowcolor;
+}
+
+.hour{
+    width: 50vh;
+    font: {
+        size: 10rem;
+        family: $txthour;
+        weight: 600; 
+    }
+    padding-bottom: 1vh;
+}
+
+.date {
+    font: {
+        size: 2rem;
+        family: $txtdate;
+    }
+}
