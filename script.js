@@ -1,21 +1,34 @@
-let hourDiv = document.getElementById('hour');
-let dateDiv = document.getElementById('date');
+const hourDiv = document.querySelector('.hours');
+const dateDiv = document.querySelector('.date');
 
-let display = () => {
-    // date actuelle
+function display () {
+
     let today = new Date(); 
-    // année
+
     let year = today.getFullYear();
-    // mois 
+    
     let monthList = ["January", "February", "March", "April", "Mei", "June", "July", "August", "September", "November", "December"];
     let month = monthList[today.getMonth()];
-    // jour
-    let dayList = []
 
-    // affichage heure
+    let dayList = ["Sunday", "Monday", "Tuesday", "Wendnesday", "Thursday", "Friday", "Saterday"];
+    let day = dayList[today.getDay()];
+    let dayNum = today.getDate()
+
     let twoDigit = (elem) => {
         if (elem < 10){
-            
+            return elem = '0' + elem;
+        } else {
+            return elem;
         }
     }
+    let hour = twoDigit(today.getHours());
+    let minutes = twoDigit(today.getMinutes());
+    let secondes = twoDigit(today.getSeconds())
+
+    hourDiv.textContent = `${hour} : ${minutes} : ${secondes}`;
+    dateDiv.textContent = `${day}, ${dayNum} ${month} ${year}`;
+
+    setTimeout(display, 1000);
 }
+
+display();

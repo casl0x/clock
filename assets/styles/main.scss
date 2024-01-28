@@ -4,6 +4,7 @@
 body {
     background: $bgcolor;
 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,26 +12,25 @@ body {
 
 .clock {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    color: $txtcolor;
-    text-shadow: 0 2px 50px $shadowcolor;
+    gap: 3vh;
+    color: $txt-color;
 }
 
-.hour{
-    width: 50vh;
+.hours {
     font: {
-        size: 10rem;
         family: $txthour;
-        weight: 600; 
+        size: 8rem
     }
-    padding-bottom: 1vh;
+    text-shadow: 3px 3px $shadow-color;
 }
 
 .date {
     font: {
-        size: 2rem;
         family: $txtdate;
+        size: 2rem;
     }
+    box-shadow: rgba($shadow-color, 0.6) 0px 3px, rgba($shadow-color, 0.4) 0px 6px, rgba($shadow-color, 0.2) 0px 9px
 }
