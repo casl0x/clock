@@ -1,6 +1,6 @@
 # 🕰️ Clock 🕰️
 
-Digital clock that tells you the time in real time !
+[Digital clock](https://casl0x.github.io/clock/) that tells you the time in real time !
 
 <img src='./clock.png' width="500">
 
